@@ -10,13 +10,23 @@
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<script src="jquery.js"></script>
 		<script src="code.js"></script>
+		<style>
+  			/* Slide responsivo */
+  			.carousel-inner img {
+      		width: 100%;
+      		height: 100%;
+  			}
+  			.navbar nav {
+  				width: 100%;
+  			}
+  		</style>
     </head>
 
     <body>
         
         <div class='row'>
 
-			<nav class="navbar navbar-expand-md bg-secondary navbar-dark fixed-top">
+			<nav class="navbar navbar-expand-md bg-secondary navbar-dark col-md-12 col-sm-12 col-xs-12">
 				<a class="mx-5 navbar-brand" href="#">
     				<img src="images/logo.png" alt="logo">
   				</a>
@@ -51,6 +61,42 @@
   				</div>  
 			</nav>
 
+		</div>
+
+		<div class="row">
+			<span>    
+				 
+			</span>
+		</div>
+<!-- ******SLIDE DE FOTOS****** !-->
+
+		<div id="demo" class="carousel slide row" data-ride="carousel">
+<!-- INDICADORES !-->
+  			<ul class="carousel-indicators">
+    			<li data-target="#demo" data-slide-to="0" class="active"></li>
+    			<li data-target="#demo" data-slide-to="1"></li>
+    			<li data-target="#demo" data-slide-to="2"></li>
+  			</ul>
+<!-- EL SLIDE !-->
+  			<div class="carousel-inner">
+    			<div class="carousel-item active">
+      				<img src="images/slide1.jpg" width="1000" height="500">
+    			</div>
+    			<div class="carousel-item">
+      				<img src="images/slide2.jpg" width="1000" height="500">
+    			</div>
+    			<div class="carousel-item">
+      				<img src="images/slide3.jpg" width="1000" height="500">
+    			</div>
+  			</div>
+  
+<!-- CONTROLES DEL SLIDE -->
+  			<a class="carousel-control-prev" href="#demo" data-slide="prev">
+    			<span class="carousel-control-prev-icon"></span>
+  			</a>
+  			<a class="carousel-control-next" href="#demo" data-slide="next">
+    			<span class="carousel-control-next-icon"></span>
+  			</a>
 		</div>
 		
     </body>
