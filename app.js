@@ -40,8 +40,22 @@ app.get('/webservices', function(request, response) {
 });
 
 app.post('/confirm', parseUrlencoded, function(request, response) {
-	
-})
+	var recibidos = request.body;
+	console.log('Se han recibido los datos...');
+	response.render('confirm',
+	{
+		nombre: recibidos.nombre,
+		apellido1: recibidos.apellido1,
+		apellido2: recibidos.apellido2,
+		genero: recibidos.genero,
+		edad: recibidos.edad,
+		email: recibidos.email,
+		dir: recibidos.dir,
+		num: recibidos.num,
+		cp: recibidos.cp,
+		mensaje: recibidos.mensaje
+	});
+});
 
 console.log('Servidor escuchando en el puerto 8080');
 
