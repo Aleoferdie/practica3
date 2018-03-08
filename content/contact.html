@@ -17,7 +17,7 @@
       <div class='row'>
 
 			<nav class="navbar navbar-expand-md bg-secondary navbar-dark col-md-12 col-sm-12 col-xs-12">
-				<a class="mx-5 navbar-brand" href="index.html">
+				<a class="mx-5 navbar-brand" href="index">
     				<img src="logo.png" alt="logo">
   				</a>
   				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -27,16 +27,16 @@
   				<div class="collapse navbar-collapse" id="collapsibleNavbar">
     				<ul class="mx-5 navbar-nav">
 
-      					<li class="mx-3 nav-item">
+      					<li class="nav-item">
        						 <a class="nav-link" href="index">PORTADA</a>
      					</li>
 
      					<li class="nav-item">
-        					<a class="nav-link" href="productos">PRODUCTOS</a>
+        					<a class="nav-link" href="products">PRODUCTOS</a>
       			   		</li>
 
       					<li class="nav-item">
-       						<a class="nav-link" href="acerca">ACERCA DE LA EMPRESA</a>
+       						<a class="nav-link" href="about">ACERCA DE LA EMPRESA</a>
      					</li>   
 
      					<li class="nav-item">
@@ -54,54 +54,57 @@
 		</div>
 
     <div class="col-md-12">
-        <form action="/contconf" method="post" style="margin: 3em;">
+        <form method="post" action="confirm" style="margin: 3em;">
           <div class="form-group">
             <div class="row">
               <div class="col-md-4">
                 <label>Nombre</label>
-              <input type="text" class="form-control" placeholder="Nombre" name="nombre">
+              <input type="text" class="form-control" placeholder="Nombre" name="Nombre">
               </div>
               <div class="col-md-4">
                 <label>Primer Apellido</label>
-              <input type="text" class="form-control" placeholder="Primer Apellido" name="apellido">
+              <input type="text" class="form-control" placeholder="Primer Apellido" name="Primer Apellido">
               </div>
               <div class="col-md-4">
                 <label>Segundo Apellido</label>
-              <input type="text" class="form-control" placeholder="Segundo Apellido" name="apellido">
+              <input type="text" class="form-control" placeholder="Segundo Apellido" name="Segundo Apellido">
               </div>
               <div class="col-md-4 my-3">
                 <label>Género</label>
-              <select class="form-control" name="genero">
+              <select class="form-control" name="Genero">
                   <option>Hombre</option>
                   <option>Mujer</option>
               </select>
               </div>
               <div class="col-md-4 my-3">
                 <label>Edad</label>
-              <input type="text" class="form-control" placeholder="Edad" name="edad">
+              <input type="text" class="form-control" placeholder="Edad" name="Edad">
               </div>
               <div class="col-md-4 my-3">
                 <label>Email</label>
-              <input type="text" class="form-control" placeholder="ejemplo@dominio.com" name="email">
+              <input type="text" class="form-control" placeholder="ejemplo@dominio.com" name="Email">
               </div>
               <div class="col-md-4">
                 <label>Dirección</label>
-              <input type="text" class="form-control" placeholder='Calle Kalea' name="direccion">
+              <input type="text" class="form-control" placeholder='Calle Kalea' name="Direccion">
               </div>
               <div class="col-md-4">
                 <label>Número</label>
-              <input type="text" class="form-control" placeholder='0' name="numero">
+              <input type="text" class="form-control" placeholder='0' name="Numero">
               </div>
               <div class="col-md-4">
                 <label>CP</label>
-              <input type="text" class="form-control" placeholder='00001' name="codigopostal">
+              <input type="text" class="form-control" placeholder='00001' name="Codigo Postal">
               </div>
             </div>
       </div>
       <div class="form-group">
           <label for="exampleFormControlTextarea1">Mensaje</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje"></textarea>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="Mensaje"></textarea>
       </div>
+     <div class="checkbox form-group">
+          <label><input type="checkbox" value=""><span class="mx-2">Acepto las condiciones de uso y privacidad</span></label>
+     </div>
       <br>
       <button type="submit" class="btn btn-secondary">Submit</button>
     </form>
