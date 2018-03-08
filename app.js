@@ -41,7 +41,7 @@ app.get('/webservices', function(request, response) {
 
 app.post('/confirm', parseUrlencoded, function(request, response) {
 	var recibidos = request.body;
-	console.log('Se han recibido los datos...');
+	//console.log('Se han recibido los datos...');
 	response.render('confirm',
 	{
 		nombre: recibidos.nombre,
@@ -56,6 +56,48 @@ app.post('/confirm', parseUrlencoded, function(request, response) {
 		mensaje: recibidos.mensaje
 	});
 });
+
+app.get('/k2-pon2oon', function(request, response) {
+	response.render('product',
+	{
+		modelo: 'K2 Pon2oon',
+		precio: '1000€',
+		desc: 'Esquís de freeride de K2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie augue in tellus sollicitudin, id consequat enim interdum. Vestibulum gravida quam id massa bibendum dignissim vel vel augue. Maecenas dapibus consequat vehicula.'
+	});
+});
+
+app.get('/armada-ARV', function(request, response) {
+	response.render('product',
+	{
+		modelo: 'Armada ARV 116',
+		precio: '889€',
+		desc: 'Esquís de freestyle de Armada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie augue in tellus sollicitudin, id consequat enim interdum. Vestibulum gravida quam id massa bibendum dignissim vel vel augue. Maecenas dapibus consequat vehicula.'
+	});
+});
+
+app.get('/atomic-redster-s9', function(request, response) {
+	response.render('product',
+	{
+		modelo: 'Atomic Redster S9',
+		precio: '850€',
+		desc: 'Esquís de competición de Atomic. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie augue in tellus sollicitudin, id consequat enim interdum. Vestibulum gravida quam id massa bibendum dignissim vel vel augue. Maecenas dapibus consequat vehicula.'
+	});
+});
+
+app.get('/webservices?id=1', function(request, response) {
+	var bloque = {'Modelo':'K2 Pon2oon','Precio':'1000€','Stock':'Disponible','imagen':'/images/k2pon2oon1.jpg'};
+	response.json(bloque);
+});
+
+app.get('/webservices?id=2', function(request, response) {
+	var bloque = {'Modelo':'Armada ARV 116','Precio':'889€','Stock':'Disponible','imagen':'/images/armada1.jpg'};
+	response.json(bloque);
+})
+
+app.get('/webservices?id=3', function(request, response) {
+	var bloque = {'Modelo':'Atomic Redster S9','Precio':'850€','Stock':'Disponible','imagen':'/images/atomic1.jpg'};
+	response.json(bloque);
+})
 
 console.log('Servidor escuchando en el puerto 8080');
 

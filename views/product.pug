@@ -1,0 +1,41 @@
+doctype html
+html(lang="es")
+  head
+    title!=modelo
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+    script(src="jquery.js")
+    script(src="code.js")
+  body
+    .row
+      nav.navbar.navbar-expand-md.bg-secondary.navbar-dark.col-md-12.col-sm-12.col-xs-12
+        a.mx-5.navbar-brand(href="index")
+          img(src="images/logo.png" alt="logo")
+        button.navbar-toggler(type="button" data-toggle="collapse" data-target="#collapsibleNavbar")
+          span.navbar-toggler-icon
+        #collapsibleNavbar.collapse.navbar-collapse
+          ul.mx-5.navbar-nav
+            li.nav-item
+              a.nav-link(href="index") PORTADA
+            li.nav-item
+              a.nav-link(href="products") PRODUCTOS
+            li.nav-item
+              a.nav-link(href="about") ACERCA DE LA EMPRESA
+            li.nav-item
+              a.nav-link(href="contact") CONTACTO
+            li.nav-item
+              a.nav-link(href="webservices") WEBSERVICES
+    div.col-sm-row.container-fluid
+      div.my-3.col-sm-6.mx-5
+        p
+          h3.text.secondary Modelo: #{modelo}
+        p.mx-3
+          b Precio:
+          span #{precio}
+        p.mx-3
+          span #{desc}      
+html
