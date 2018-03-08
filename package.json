@@ -1,0 +1,25 @@
+{
+  "name": "p3",
+  "version": "1.0.0",
+  "description": "practica3dsm",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "pug": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aleoferdie/practica3.git"
+  },
+  "author": "orbaiceta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aleoferdie/practica3/issues"
+  },
+  "homepage": "https://github.com/Aleoferdie/practica3#readme"
+}
