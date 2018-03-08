@@ -35,9 +35,9 @@ app.get('/contact', function(request, response) {
 	response.sendFile(path.join(__dirname + '/content/contact.html'));
 });
 
-app.get('/webservices', function(request, response) {
-	response.sendFile(path.join(__dirname + '/content/webserv.html'));
-});
+//app.get('/webservices', function(request, response) {
+//	response.sendFile(path.join(__dirname + '/content/webserv.html'));
+//});
 
 app.post('/confirm', parseUrlencoded, function(request, response) {
 	var recibidos = request.body;
@@ -84,19 +84,24 @@ app.get('/atomic-redster-s9', function(request, response) {
 	});
 });
 
-app.get('/webservices?id=1', function(request, response) {
-	var bloque = {'Modelo':'K2 Pon2oon','Precio':'1000€','Stock':'Disponible','imagen':'/images/k2pon2oon1.jpg'};
-	response.json(bloque);
-});
-
-app.get('/webservices?id=2', function(request, response) {
-	var bloque = {'Modelo':'Armada ARV 116','Precio':'889€','Stock':'Disponible','imagen':'/images/armada1.jpg'};
-	response.json(bloque);
-})
-
-app.get('/webservices?id=3', function(request, response) {
-	var bloque = {'Modelo':'Atomic Redster S9','Precio':'850€','Stock':'Disponible','imagen':'/images/atomic1.jpg'};
-	response.json(bloque);
+app.get('/webservices', function(request, response) {
+	console.log(request.query.id);
+	switch(request.query.id) {
+		case '1':
+			var bloque = {'Modelo':'K2 Pon2oon','Precio':'1000€','Stock':'Disponible','imagen':'/images/k2pon2oon1.jpg'};
+			response.json(bloque);
+			break;
+		case '2':
+			var bloque = {'Modelo':'Armada ARV 116','Precio':'889€','Stock':'Disponible','imagen':'/images/armada1.jpg'};
+			response.json(bloque);	
+			break;
+		case '3':
+			var bloque = {'Modelo':'Atomic Redster S9S','Precio':'850€','Stock':'Disponible','imagen':'/images/atomic1.jpg'};
+			response.json(bloque);	
+			break;
+		default:
+			response.sendFile(path.join(__dirname + '/content/webserv.html'));
+	}
 })
 
 console.log('Servidor escuchando en el puerto 8080');
