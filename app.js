@@ -10,6 +10,7 @@ var bodyParser = require('body-parser');
 var parseUrlencoded = bodyParser.urlencoded({ extended: false });
 var maxData = 20 * 1024 * 1024; // 20 MB
 var pug = require('pug');
+var port = process.env.PORT || 8080;
 
 app.set('view engine', 'pug');
 
@@ -106,4 +107,4 @@ app.get('/webservices', function(request, response) {
 
 console.log('Servidor escuchando en el puerto 8080');
 
-app.listen(8080);
+app.listen(port);
