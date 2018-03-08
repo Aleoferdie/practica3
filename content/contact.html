@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+  	<head>
+		<title>Contacto</title>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<script src="jquery.js"></script>
+		<script src="code.js"></script>
+    </head>
+
+    <body>
+        
+      <div class='row'>
+
+			<nav class="navbar navbar-expand-md bg-secondary navbar-dark col-md-12 col-sm-12 col-xs-12">
+				<a class="mx-5 navbar-brand" href="index.html">
+    				<img src="images/logo.png" alt="logo">
+  				</a>
+  				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    				<span class="navbar-toggler-icon"></span>
+  				</button>
+
+  				<div class="collapse navbar-collapse" id="collapsibleNavbar">
+    				<ul class="mx-5 navbar-nav">
+
+      					<li class="mx-3 nav-item">
+       						 <a class="nav-link" href="index">PORTADA</a>
+     					</li>
+
+     					<li class="nav-item">
+        					<a class="nav-link" href="productos">PRODUCTOS</a>
+      			   		</li>
+
+      					<li class="nav-item">
+       						<a class="nav-link" href="acerca">ACERCA DE LA EMPRESA</a>
+     					</li>   
+
+     					<li class="nav-item">
+        					<a class="nav-link" href="contact">CONTACTO</a>
+      			    	</li>
+
+      			    	<li class="nav-item">
+        					<a class="nav-link" href="webservices">WEBSERVICES</a>
+      			    	</li>
+
+    				</ul>
+  				</div>  
+			</nav>
+
+		</div>
+
+    <div class="col-md-12">
+        <form action="/contconf" method="post" style="margin: 3em;">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-4">
+                <label>Nombre</label>
+              <input type="text" class="form-control" placeholder="Nombre" name="nombre">
+              </div>
+              <div class="col-md-4">
+                <label>Primer Apellido</label>
+              <input type="text" class="form-control" placeholder="Primer Apellido" name="apellido">
+              </div>
+              <div class="col-md-4">
+                <label>Segundo Apellido</label>
+              <input type="text" class="form-control" placeholder="Segundo Apellido" name="apellido">
+              </div>
+              <div class="col-md-4 my-3">
+                <label>Género</label>
+              <select class="form-control" name="genero">
+                  <option>Hombre</option>
+                  <option>Mujer</option>
+              </select>
+              </div>
+              <div class="col-md-4 my-3">
+                <label>Edad</label>
+              <input type="text" class="form-control" placeholder="Edad" name="edad">
+              </div>
+              <div class="col-md-4 my-3">
+                <label>Email</label>
+              <input type="text" class="form-control" placeholder="ejemplo@dominio.com" name="email">
+              </div>
+              <div class="col-md-4">
+                <label>Dirección</label>
+              <input type="text" class="form-control" placeholder='Calle Kalea' name="direccion">
+              </div>
+              <div class="col-md-4">
+                <label>Número</label>
+              <input type="text" class="form-control" placeholder='0' name="numero">
+              </div>
+              <div class="col-md-4">
+                <label>CP</label>
+              <input type="text" class="form-control" placeholder='00001' name="codigopostal">
+              </div>
+            </div>
+      </div>
+      <div class="form-group">
+          <label for="exampleFormControlTextarea1">Mensaje</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje"></textarea>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-secondary">Submit</button>
+    </form>
+    </div>
+		
+    </body>
+</html>
+       
