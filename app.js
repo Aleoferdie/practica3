@@ -5,7 +5,8 @@ var fs = require('fs');
 var form = require('fs').readFileSync('content/contact.html');
 var util = require('util');
 var querystring = require('querystring');
-var maxData = 20 * 1024 * 1024 // 20 MB
+var maxData = 20 * 1024 * 1024; // 20 MB
+var app = require('express');
 
 var mimeTypes = {
 				'.js' : 'text/javascript',
