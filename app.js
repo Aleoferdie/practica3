@@ -106,7 +106,7 @@ app.get('/webservices', function(request, response) {
 		default:
 			response.sendFile(path.join(__dirname + '/content/webserv.html'));
 	}
-})
+});
 
 console.log('Servidor escuchando en el puerto 8080');
 
