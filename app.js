@@ -63,6 +63,7 @@ app.get('/k2-pon2oon', function(request, response) {
 	{
 		modelo: 'K2 Pon2oon',
 		precio: '1000€',
+		stock: 'Disponible',
 		desc: 'Esquís de freeride de K2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie augue in tellus sollicitudin, id consequat enim interdum. Vestibulum gravida quam id massa bibendum dignissim vel vel augue. Maecenas dapibus consequat vehicula.'
 	});
 });
@@ -72,6 +73,7 @@ app.get('/armada-ARV', function(request, response) {
 	{
 		modelo: 'Armada ARV 116',
 		precio: '889€',
+		stock: 'Disponible',
 		desc: 'Esquís de freestyle de Armada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie augue in tellus sollicitudin, id consequat enim interdum. Vestibulum gravida quam id massa bibendum dignissim vel vel augue. Maecenas dapibus consequat vehicula.'
 	});
 });
@@ -81,6 +83,7 @@ app.get('/atomic-redster-s9', function(request, response) {
 	{
 		modelo: 'Atomic Redster S9',
 		precio: '850€',
+		stock: 'Disponible',
 		desc: 'Esquís de competición de Atomic. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie augue in tellus sollicitudin, id consequat enim interdum. Vestibulum gravida quam id massa bibendum dignissim vel vel augue. Maecenas dapibus consequat vehicula.'
 	});
 });
